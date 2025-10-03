@@ -253,4 +253,21 @@
     })
   });
 
+  /**
+   * Cookie
+   */
+  document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("cookieBanner");
+  const btn = document.getElementById("acceptCookies");
+
+  if (localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "none";
+  }
+
+  btn.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+  });
+});
+
 })()
