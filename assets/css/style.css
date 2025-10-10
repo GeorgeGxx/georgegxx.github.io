@@ -889,6 +889,7 @@ section {
 
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .contact .php-email-form .validate {
@@ -941,9 +942,9 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form .form-group {
+/* .contact .php-email-form .form-group {
   margin-bottom: 15px;
-}
+} */
 
 .contact .php-email-form label {
   padding-bottom: 8px;
@@ -1071,4 +1072,51 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+/*--------------------------------------------------------------
+# Cookie
+--------------------------------------------------------------*/
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #040b14;
+  color: #fff;
+  padding: 15px;
+  z-index: 9999;
+
+  display: block;           /* forzamos diseño en bloque */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.cookie-banner p {
+  margin: 0 0 10px 0;       /* espacio entre texto y botón */
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cookie-banner a {
+  color: #4caf50;
+  text-decoration: underline;
+}
+
+.cookie-banner button {
+  display: inline-block;
+  background: #4caf50;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.cookie-banner button:hover {
+  background: #45a049;
 }
