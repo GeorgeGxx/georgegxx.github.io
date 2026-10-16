@@ -1,16 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #070a0e;
-  --color-panel: #0d1319;
-  --color-panel-alt: #111822;
-  --color-line: #1c2633;
-  --color-line-bright: #29384b;
-  --color-signal: #22d3ee;
-  --color-signal-dim: #0891b2;
-  --color-ok: #10b981;
-  --color-warn: #f59e0b;
-  --color-whatsapp: #25d366;
   --font-mono: 'JetBrains Mono', monospace;
   --font-sans: 'Inter', sans-serif;
 }
@@ -38,19 +28,6 @@ body {
   background-size: 40px 40px;
 }
 
-/* Glassmorphism */
-.glass-panel {
-  background: rgba(13, 19, 25, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(34, 211, 238, 0.12);
-}
-
-.glass-panel:hover {
-  border-color: rgba(34, 211, 238, 0.35);
-  box-shadow: 0 0 25px rgba(34, 211, 238, 0.1);
-}
-
 /* Terminal scrollbar */
 .terminal-scroll::-webkit-scrollbar {
   width: 6px;
@@ -66,3 +43,267 @@ body {
 .terminal-scroll::-webkit-scrollbar-thumb:hover {
   background: rgba(56, 189, 248, 0.4);
 }
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Holographic Shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 4.5s ease-in-out infinite;
+}
+
+/* Halloween Bat Wing Flap Animations (Anatomical Pivoting & Flap-Glide Cycle) */
+@keyframes wing-left {
+  0% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  18% {
+    transform: rotate(-26deg) scaleY(0.9);
+  }
+  36% {
+    transform: rotate(22deg) scaleY(1.05);
+  }
+  54% {
+    transform: rotate(-26deg) scaleY(0.9);
+  }
+  72% {
+    transform: rotate(20deg) scaleY(1.05);
+  }
+  88% {
+    transform: rotate(-4deg) scaleY(0.98); /* Glide / planeo */
+  }
+  100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+}
+
+@keyframes wing-right {
+  0% {
+    transform: rotate(0deg) scaleY(1);
+  }
+  18% {
+    transform: rotate(26deg) scaleY(0.9);
+  }
+  36% {
+    transform: rotate(-22deg) scaleY(1.05);
+  }
+  54% {
+    transform: rotate(26deg) scaleY(0.9);
+  }
+  72% {
+    transform: rotate(-20deg) scaleY(1.05);
+  }
+  88% {
+    transform: rotate(4deg) scaleY(0.98); /* Glide / planeo */
+  }
+  100% {
+    transform: rotate(0deg) scaleY(1);
+  }
+}
+
+@keyframes bat-body-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  36%, 72% {
+    transform: translateY(-1.5px);
+  }
+  18%, 54% {
+    transform: translateY(1px);
+  }
+}
+
+.animate-wing-left {
+  transform-box: fill-box;
+  transform-origin: 100% 28%;
+  animation: wing-left 0.75s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wing-right {
+  transform-box: fill-box;
+  transform-origin: 0% 28%;
+  animation: wing-right 0.75s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wing-left-fast {
+  transform-box: fill-box;
+  transform-origin: 100% 28%;
+  animation: wing-left 0.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wing-right-fast {
+  transform-box: fill-box;
+  transform-origin: 0% 28%;
+  animation: wing-right 0.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-bat-body {
+  animation: bat-body-bob 0.75s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes bat-flight-1 {
+  0% {
+    transform: translate3d(-15vw, 15vh, 0) scale(0.85) rotate(18deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  30% {
+    transform: translate3d(25vw, 8vh, 0) scale(1) rotate(-8deg);
+  }
+  55% {
+    transform: translate3d(55vw, 24vh, 0) scale(0.9) rotate(22deg);
+  }
+  75% {
+    transform: translate3d(80vw, 10vh, 0) scale(0.95) rotate(-6deg);
+  }
+  90% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate3d(115vw, 28vh, 0) scale(0.8) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+.animate-bat-flight-1 {
+  animation: bat-flight-1 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform;
+}
+
+.animate-bat-flight-1-delayed {
+  animation: bat-flight-1 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 2.2s;
+  will-change: transform;
+}
+
+@keyframes bat-flight-2 {
+  0% {
+    transform: translate3d(115vw, 35vh, 0) scaleX(-1) scale(0.9) rotate(12deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.95;
+  }
+  35% {
+    transform: translate3d(70vw, 55vh, 0) scaleX(-1) scale(1.1) rotate(-16deg);
+  }
+  65% {
+    transform: translate3d(35vw, 32vh, 0) scaleX(-1) scale(0.95) rotate(18deg);
+  }
+  90% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate3d(-15vw, 48vh, 0) scaleX(-1) scale(0.8) rotate(-12deg);
+    opacity: 0;
+  }
+}
+
+.animate-bat-flight-2 {
+  animation: bat-flight-2 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 4.5s;
+  will-change: transform;
+}
+
+@keyframes bat-flight-3 {
+  0% {
+    transform: translate3d(-10vw, 6vh, 0) scale(0.6) rotate(15deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate3d(48vw, 18vh, 0) scale(0.7) rotate(-10deg);
+  }
+  85% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(110vw, 4vh, 0) scale(0.55) rotate(12deg);
+    opacity: 0;
+  }
+}
+
+.animate-bat-flight-3 {
+  animation: bat-flight-3 18s ease-in-out infinite;
+  animation-delay: 1s;
+  will-change: transform;
+}
+
+@keyframes bat-flight-4 {
+  0% {
+    transform: translate3d(110vw, 12vh, 0) scaleX(-1) scale(0.75) rotate(24deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  40% {
+    transform: translate3d(60vw, 68vh, 0) scaleX(-1) scale(1.15) rotate(-22deg);
+  }
+  70% {
+    transform: translate3d(25vw, 28vh, 0) scaleX(-1) scale(0.9) rotate(20deg);
+  }
+  90% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate3d(-15vw, 15vh, 0) scaleX(-1) scale(0.7) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+.animate-bat-flight-4 {
+  animation: bat-flight-4 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: 8s;
+  will-change: transform;
+}
+
+@keyframes bat-scatter {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.4) rotate(-20deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translate3d(50px, -70px, 0) scale(1) rotate(15deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translate3d(130px, -180px, 0) scale(1.1) rotate(-10deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(240px, -340px, 0) scale(0.6) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+.animate-bat-scatter {
+  animation: bat-scatter 1.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+

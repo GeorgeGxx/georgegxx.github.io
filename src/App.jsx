@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Lightbox from './components/Lightbox';
 import BackToTop from './components/BackToTop';
+import HalloweenBats from './components/HalloweenBats';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -28,6 +29,7 @@ export default function App() {
 
       <Footer />
       <BackToTop />
+      <HalloweenBats />
 
       {selectedProject && (
         <Lightbox

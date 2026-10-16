@@ -3,9 +3,13 @@ import { useState } from 'react';
 export default function About() {
   const [copied, setCopied] = useState(false);
 
-  const yamlContent = `role: Cloud & AI Solutions Architect
+  const yamlContent = `role: Multi-Cloud & AI Solutions Architect
 experience: 15 years
-focus: [cloud architecture, devsecops, AI platforms, data engineering]
+focus:
+  - cloud architecture
+  - devsecops
+  - AI platforms
+  - data engineering
 languages:
   - spanish: native
   - english: fluent
@@ -13,7 +17,7 @@ education:
   - degree: CS Engineering
   - degree: MBA, Finance
   - institution: UNITEC
-status: open_to_work: true`;
+Status: Available`;
 
   const copyYaml = () => {
     navigator.clipboard?.writeText(yamlContent);
@@ -48,14 +52,6 @@ status: open_to_work: true`;
                   height="500"
                   className="w-full aspect-[4/5] object-cover filter contrast-[1.03] transition-transform duration-500 group-hover:scale-[1.02]"
                 />
-
-                <div className="absolute bottom-3 left-3 right-3 bg-[#070a0e]/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-slate-700/80 flex items-center justify-between text-xs font-mono">
-                  <span className="flex items-center gap-2 text-slate-200">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    available for new roles
-                  </span>
-                  <span className="text-cyan-400 font-semibold">15 yrs exp</span>
-                </div>
               </div>
             </div>
           </div>
@@ -63,14 +59,17 @@ status: open_to_work: true`;
           {/* Bio text & YAML card */}
           <div className="lg:col-span-7 space-y-6">
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              Results-driven Cloud &amp; AI Solutions Architect designing, developing and deploying secure, scalable cloud-native applications and infrastructure. I apply a secure-by-design mindset and the Well-Architected Framework to build resilient, cost-optimized platforms at scale — with strong focus on observability, cyber governance and full-stack automation across multi-cloud environments. Proven track record leading cross-functional teams, embedding Agile best practices and shipping business-aligned solutions end-to-end.
+              Results-driven Multi-Cloud &amp; AI Solutions Architect designing, developing and deploying secure, scalable cloud-native applications and infrastructure. I apply a secure-by-design mindset and the Well-Architected Framework to build resilient, cost-optimized platforms at scale — with strong focus on observability, cyber governance and full-stack automation across multi-cloud environments. Proven track record leading cross-functional teams, embedding Agile best practices and shipping business-aligned solutions end-to-end.
             </p>
 
             {/* YAML Card */}
             <div className="rounded-xl overflow-hidden border border-slate-800 bg-[#0b1016] shadow-xl">
               <div className="px-4 py-2.5 bg-[#0e151e] border-b border-slate-800 flex items-center justify-between">
-                <span className="font-mono text-xs text-slate-400 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                <span className="font-mono text-xs text-slate-300 flex items-center gap-2">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400 shadow-[0_0_8px_#22d3ee]"></span>
+                  </span>
                   about.yaml
                 </span>
                 <button
@@ -82,10 +81,14 @@ status: open_to_work: true`;
                 </button>
               </div>
 
-              <pre className="p-5 font-mono text-xs sm:text-[13px] leading-relaxed overflow-x-auto text-slate-300">
-                <span className="text-cyan-400">role:</span> <span className="text-slate-200">Cloud &amp; AI Solutions Architect</span>{'\n'}
+              <pre className="p-5 font-mono text-xs sm:text-[13px] leading-relaxed whitespace-pre-wrap break-words text-slate-300">
+                <span className="text-cyan-400">role:</span> <span className="text-slate-200">Multi-Cloud &amp; AI Solutions Architect</span>{'\n'}
                 <span className="text-cyan-400">experience:</span> <span className="text-slate-200">15 years</span>{'\n'}
-                <span className="text-cyan-400">focus:</span> <span className="text-emerald-400">[cloud architecture, devsecops, AI platforms, data engineering]</span>{'\n'}
+                <span className="text-cyan-400">focus:</span>{'\n'}
+                {'  '}- <span className="text-emerald-400">cloud architecture</span>{'\n'}
+                {'  '}- <span className="text-emerald-400">devsecops</span>{'\n'}
+                {'  '}- <span className="text-emerald-400">AI platforms</span>{'\n'}
+                {'  '}- <span className="text-emerald-400">data engineering</span>{'\n'}
                 <span className="text-cyan-400">languages:</span>{'\n'}
                 {'  '}- <span className="text-slate-400">spanish:</span> <span className="text-slate-200">native</span>{'\n'}
                 {'  '}- <span className="text-slate-400">english:</span> <span className="text-slate-200">fluent</span>{'\n'}
@@ -93,7 +96,10 @@ status: open_to_work: true`;
                 {'  '}- <span className="text-slate-400">degree:</span> <span className="text-slate-200">CS Engineering</span>{'\n'}
                 {'  '}- <span className="text-slate-400">degree:</span> <span className="text-slate-200">MBA, Finance</span>{'\n'}
                 {'  '}- <span className="text-slate-400">institution:</span> <span className="text-slate-200">UNITEC</span>{'\n'}
-                <span className="text-cyan-400">status:</span> <span className="text-amber-400 font-semibold">open_to_work: true</span>
+                <span className="text-cyan-400">Status:</span>{' '}
+                <span className="inline-block font-bold text-emerald-300 drop-shadow-[0_0_10px_rgba(52,211,153,0.95)] animate-pulse tracking-wide">
+                  Available
+                </span>
               </pre>
             </div>
           </div>
