@@ -13,8 +13,7 @@ export default function Hero() {
           
           {/* Left Hero Content */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-800/40 font-mono text-xs text-cyan-400 mb-5 shadow-[0_0_15px_rgba(34,211,238,0.15)]">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-800/40 font-mono text-xs text-cyan-400 mb-5 shadow-[0_0_15px_rgba(34,211,238,0.15)]">
               <span>// portfolio · deployed from master</span>
             </div>
 
@@ -22,9 +21,8 @@ export default function Hero() {
               Jorge Gallaga
             </h1>
 
-            <p className="font-mono text-lg sm:text-xl text-cyan-400 font-semibold mb-6 flex items-center gap-2">
-              <span>Cloud &amp; AI Solutions Architect</span>
-              <span className="hidden sm:inline-block text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">Multi-Cloud</span>
+            <p className="font-mono text-lg sm:text-xl text-cyan-400 font-semibold mb-6">
+              Multi-Cloud &amp; AI Solutions Architect
             </p>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
@@ -34,15 +32,15 @@ export default function Hero() {
             {/* Strategic CTAs */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
-                href="https://wa.me/525514925837"
+                href="https://www.linkedin.com/in/albertoarevalo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-mono text-sm font-bold bg-[#25d366] text-[#042512] hover:bg-[#34e777] transition-all duration-200 shadow-[0_4px_20px_rgba(37,211,102,0.35)] hover:shadow-[0_6px_25px_rgba(37,211,102,0.5)] hover:-translate-y-0.5 cursor-pointer"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-mono text-sm font-bold bg-[#0077b5] text-white hover:bg-[#0088d1] transition-all duration-200 shadow-[0_4px_20px_rgba(0,119,181,0.35)] hover:shadow-[0_6px_25px_rgba(0,119,181,0.5)] hover:-translate-y-0.5 cursor-pointer"
               >
                 <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true">
-                  <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.03 8.03 0 0 1-1.23-4.29c0-4.43 3.61-8.04 8.04-8.04 2.15 0 4.16.84 5.68 2.36a7.98 7.98 0 0 1 2.35 5.68c0 4.43-3.61 8.04-8.06 8.04zm4.41-6.03c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.55-.42-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/>
+                  <path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
                 </svg>
-                Chat on WhatsApp
+                Connect on LinkedIn
               </a>
 
               <a
@@ -53,18 +51,18 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Social Icons row - Unique presence of LinkedIn */}
+            {/* Social Icons row */}
             <ul className="flex items-center gap-3.5" aria-label="Social profiles">
               <li>
                 <a
-                  href="https://www.linkedin.com/in/albertoarevalo"
+                  href="https://wa.me/525514925837"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="w-10 h-10 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-all duration-200 hover:-translate-y-1"
+                  aria-label="WhatsApp"
+                  className="w-10 h-10 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-[#25d366] hover:border-[#25d366]/50 hover:shadow-[0_0_15px_rgba(37,211,102,0.2)] transition-all duration-200 hover:-translate-y-1"
                 >
                   <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                    <path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+                    <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.06c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.03 8.03 0 0 1-1.23-4.29c0-4.43 3.61-8.04 8.04-8.04 2.15 0 4.16.84 5.68 2.36a7.98 7.98 0 0 1 2.35 5.68c0 4.43-3.61 8.04-8.06 8.04zm4.41-6.03c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.55-.42-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/>
                   </svg>
                 </a>
               </li>
@@ -78,19 +76,6 @@ export default function Hero() {
                 >
                   <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
                     <path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.03-.01-1.87-2.78.61-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.33 1.1 2.9.84.09-.66.35-1.1.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.19C22 6.58 17.52 2 12 2z"/>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://georgegxx.gitlab.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitLab"
-                  className="w-10 h-10 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-all duration-200 hover:-translate-y-1"
-                >
-                  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                    <path fill="currentColor" d="M12 21.4 15.9 9.5H8.1L12 21.4z"/><path fill="currentColor" d="m3.7 9.5 1.86 5.7c.1.3.22.6.38.87L12 21.4 8.1 9.5H3.7z" opacity=".7"/><path fill="currentColor" d="M3.7 9.5 2.06 14.6a.9.9 0 0 0 .33 1L12 21.4 3.7 9.5z" opacity=".45"/><path fill="currentColor" d="m20.3 9.5-1.86 5.7c-.1.3-.22.6-.38.87L12 21.4l3.9-11.9h4.4z" opacity=".7"/><path fill="currentColor" d="M20.3 9.5 21.94 14.6a.9.9 0 0 1-.33 1L12 21.4 20.3 9.5z" opacity=".45"/><path fill="currentColor" d="M15.9 9.5 14.1 3.95a.55.55 0 0 0-1.05 0L12 9.5h3.9z" opacity=".9"/><path fill="currentColor" d="M8.1 9.5 9.9 3.95a.55.55 0 0 1 1.05 0L12 9.5H8.1z" opacity=".9"/>
                   </svg>
                 </a>
               </li>
