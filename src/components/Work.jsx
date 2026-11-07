@@ -71,7 +71,7 @@ export default function Work({ onSelectProject }) {
 
   return (
     <section className="py-16 sm:py-24 relative" id="work">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 scroll-reveal">
         
         {/* Section Header with Carousel Arrow Controls */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-10">

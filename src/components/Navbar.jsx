@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const navItems = [
     { href: '#about', label: 'about' },
@@ -14,6 +15,11 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Update reading progress percentage
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const currentProgress = totalScroll > 0 ? Math.min(100, Math.max(0, (window.scrollY / totalScroll) * 100)) : 0;
+      setScrollProgress(currentProgress);
+
       // 1. If at (or near) the bottom of the page, activate 'contact' immediately
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
         setActiveSection('contact');
@@ -137,6 +143,13 @@ export default function Navbar() {
           </div>
         </div>
       )}
+      {/* Reading Progress Bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-transparent pointer-events-none overflow-hidden">
+        <div
+          className="h-full bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 shadow-[0_0_10px_rgba(34,211,238,0.8)] transition-[width] duration-75 ease-out"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
     </header>
   );
 }

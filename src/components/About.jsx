@@ -27,7 +27,7 @@ Status: Available`;
 
   return (
     <section className="py-24 relative" id="about">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 scroll-reveal">
         
         {/* Section Header */}
         <div className="mb-12">

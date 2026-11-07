@@ -4,7 +4,7 @@ export default function Contact() {
       {/* Background glow radial */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-r from-cyan-500/10 via-emerald-500/10 to-transparent blur-[140px] pointer-events-none" />
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 scroll-reveal">
         <p className="font-mono text-xs text-cyan-400 tracking-wider uppercase mb-3">// 05 · contact</p>
 
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
